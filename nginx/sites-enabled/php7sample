@@ -1,7 +1,7 @@
 server {
         listen 80;
 
-        server_name fancords.com;
+        server_name php7.fancords.com;
 
         root /var/www/html/php7/sample/;
         index index.php index.html index.htm default.html default.htm;

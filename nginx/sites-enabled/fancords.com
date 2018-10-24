@@ -1,9 +1,9 @@
 server {
-        listen 80 default_server;
+        listen 80;
 
-        server_name php5.fancords.com;
+        server_name fancords.com;
 
-        root /var/www/html/php5/sample/;
+        root /var/www/html/php7/fancords.com/;
         index index.php index.html index.htm default.html default.htm;
 
         fastcgi_buffers 8 16k;
@@ -11,7 +11,7 @@ server {
         fastcgi_read_timeout 180;
 
         location ~ \.php$ {
-            fastcgi_pass php5:9000;
+            fastcgi_pass  php7:9000;
             fastcgi_index index.php;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;

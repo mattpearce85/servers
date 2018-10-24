@@ -1,0 +1,9 @@
+/perl/*
+!/perl/sample/
+
+/php5/*
+!/php5/sample/
+
+/php7/*
+!/php7/sample/
+
