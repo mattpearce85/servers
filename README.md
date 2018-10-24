@@ -1,5 +1,6 @@
 # servers
 
+```
 sudo docker run --name php5 \
   -v /home/mattpearce85/servers/php5:/var/www/html/php5 \
   -d -p 9000:9000 php:5.6-fpm
@@ -19,4 +20,4 @@ sudo docker run --name nginx-cache \
   -v /home/mattpearce85/servers/php7:/var/www/html/php7 \
   -v /home/mattpearce85/servers/perl:/srv/www/perl \
   --link php5 --link php7 --link perl -d -p 80:80 nginx
-
+```
