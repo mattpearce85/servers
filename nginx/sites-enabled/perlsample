@@ -11,7 +11,7 @@ server {
         fastcgi_read_timeout 180;
 
         location ~ \.pl|cgi$ {
-            fastcgi_pass perl:9000;
+            fastcgi_pass perl-service:9000;
             fastcgi_index index.pl;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;

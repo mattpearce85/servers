@@ -10,3 +10,5 @@
 /mariadb/*
 !/mariadb/.gitkeep
 
+/phpmyadmin/sessions/*
+
