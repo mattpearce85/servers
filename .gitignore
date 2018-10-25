@@ -1,9 +1,12 @@
-/perl/*
-!/perl/sample/
+/webroot/perl/*
+!/webroot/perl/sample/
 
-/php5/*
-!/php5/sample/
+/webroot/php5/*
+!/webroot/php5/sample/
 
-/php7/*
-!/php7/sample/
+/webroot/php7/*
+!/webroot/php7/sample/
+
+/mariadb/*
+!/mariadb/.gitkeep
 
