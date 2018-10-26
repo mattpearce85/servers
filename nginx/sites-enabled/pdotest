@@ -1,18 +1,18 @@
 server {
         listen 80;
 
-        server_name perl.fancords.com;
+        server_name pdotest.fancords.com;
 
-        root /var/www/html/perl/sample/;
-        index index.html index.htm index.php index.pl index.cgi;
+        root /var/www/html/php7/pdotest/public/;
+        index index.php index.html index.htm default.html default.htm;
 
         fastcgi_buffers 8 16k;
         fastcgi_buffer_size 32k;
         fastcgi_read_timeout 180;
 
-        location ~ \.pl|cgi$ {
-            fastcgi_pass perl-service:9000;
-            fastcgi_index index.pl;
+        location ~ \.php$ {
+            fastcgi_pass php7-service:9000;
+            fastcgi_index index.php;
             include fastcgi_params;
             fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
             fastcgi_param SERVER_NAME $server_name;
