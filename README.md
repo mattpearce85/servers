@@ -2,12 +2,12 @@
 
 ```
 sudo docker run --name mariadb-service \
-  -v /home/mattpearce85/servers/webroot/mariadb:/var/lib/mysql \
+  -v /home/mattpearce85/servers/mariadb:/var/lib/mysql \
   -e MYSQL_ROOT_PASSWORD=mysqltemp \
-  -d mariadb:10.3.9
+  -d -p 3306:3306 mariadb:10.3.9
 sudo docker run --name phpmyadmin-service \
-  -v /home/mattpearce85/servers/webroot/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php \
-  -v /home/mattpearce85/servers/webroot/phpmyadmin/sessions:/sessions \
+  -v /home/mattpearce85/servers/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php \
+  -v /home/mattpearce85/servers/phpmyadmin/sessions:/sessions \
   -e PMA_HOST=mariadb-service \
   -e PMA_PORT=3306 \
   -e PMA_ABSOLUTE_URI=https://pma.fancords.com \
