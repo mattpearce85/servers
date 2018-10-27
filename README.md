@@ -17,7 +17,7 @@ sudo docker run --name php5-service \
   --link mariadb-service -d -p 9000:9000 php:5.6-fpm
 sudo docker run --name php7-service \
   -v /home/mattpearce85/servers/webroot/php7:/var/www/html/php7 \
-  --link mariadb-service -d -p 9001:9000 vastblueshift/php-7.2-fpm:latest
+  --link mariadb-service -d -p 9001:9000 vastblueshift/alpine-php7-fpm:latest
 sudo docker run --name perl-service \
   -v /home/mattpearce85/servers/webroot/perl:/var/www/html/perl \
   --link mariadb-service -d -p 9002:9000 vastblueshift/fcgiwrap-perl:latest
