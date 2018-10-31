@@ -1,3 +1,5 @@
+/.idea/
+
 /webroot/perl/*
 !/webroot/perl/sample/
 
