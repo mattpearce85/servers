@@ -1,5 +1,6 @@
 # servers
 
+### Run commands
 ```
 sudo docker run --name mariadb-service \
   -v /home/mattpearce85/servers/mariadb:/var/lib/mysql \
@@ -26,5 +27,18 @@ sudo docker run --name nginx-service \
   -v /home/mattpearce85/servers/nginx/sites-enabled:/etc/nginx/sites-enabled \
   -v /home/mattpearce85/servers/webroot:/var/www/html \
   --link php5-service --link php7-service --link perl-service --link phpmyadmin-service -d -p 80:80 nginx
+
+```
+
+### Kill and remove all docker containers
+```
+sudo docker kill $(sudo docker ps -aq)
+sudo docker rm -f $(sudo docker ps -aq)
+
+```
+
+### Remove all docker images
+```
+sudo docker rmi -f $(sudo docker images -q)
 
 ```
