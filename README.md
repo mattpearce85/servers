@@ -14,10 +14,10 @@ sudo docker run --name phpmyadmin-service \
   --link mariadb-service -d phpmyadmin/phpmyadmin
 sudo docker run --name php5-service \
   -v /home/mattpearce85/servers/webroot/php5:/var/www/html/php5 \
-  --link mariadb-service -d -p 9000:9000 php:5.6-fpm
+  --link mariadb-service -d -p 9000:9000 vastblueshift/ubuntu-16.04-webserver:1.4.0-php5.6-fpm
 sudo docker run --name php7-service \
   -v /home/mattpearce85/servers/webroot/php7:/var/www/html/php7 \
-  --link mariadb-service -d -p 9001:9000 vastblueshift/ubuntu-16.04-webserver:1.2.1
+  --link mariadb-service -d -p 9001:9000 vastblueshift/ubuntu-16.04-webserver:1.4.0-php7.2-fpm
 sudo docker run --name perl-service \
   -v /home/mattpearce85/servers/webroot/perl:/var/www/html/perl \
   --link mariadb-service -d -p 9002:9000 vastblueshift/fcgiwrap-perl:latest
