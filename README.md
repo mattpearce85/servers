@@ -42,3 +42,11 @@ sudo docker rm -f $(sudo docker ps -aq)
 sudo docker rmi -f $(sudo docker images -q)
 
 ```
+
+### Common commands
+```
+sudo docker exec -it php5-service bash
+sudo docker exec -it phpmyadmin-service sh
+
+service nginx reload
+```
