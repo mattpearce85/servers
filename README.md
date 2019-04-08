@@ -22,11 +22,15 @@ sudo docker run --name php7-service \
 sudo docker run --name perl-service \
   -v /home/mattpearce85/servers/webroot/perl:/var/www/html/perl \
   --link mariadb-service -d -p 9002:9000 vastblueshift/fcgiwrap-perl:latest
+sudo docker run --name theia-service \
+  -v "/home/mattpearce85:/home/project:cached" \
+  -d -p 3000:3000 -u 1000:1000 theiaide/theia:next
 sudo docker run --name nginx-service \
   -v /home/mattpearce85/servers/nginx/nginx.conf:/etc/nginx/nginx.conf \
   -v /home/mattpearce85/servers/nginx/sites-enabled:/etc/nginx/sites-enabled \
   -v /home/mattpearce85/servers/webroot:/var/www/html \
-  --link php5-service --link php7-service --link perl-service --link phpmyadmin-service -d -p 80:80 nginx
+  -v /home/mattpearce85/.htpasswd:/etc/nginx/.htpasswd \
+  --link php5-service --link php7-service --link perl-service --link phpmyadmin-service --link theia-service -d -p 80:80 nginx
 
 ```
 
