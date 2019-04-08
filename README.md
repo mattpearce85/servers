@@ -36,8 +36,8 @@ docker run --name nginx-service \
 
 ### Kill and remove all docker containers
 ```
-sudo docker kill $(sudo docker ps -aq)
-sudo docker rm -f $(sudo docker ps -aq)
+docker kill $(docker ps -aq)
+docker rm -f $(docker ps -aq)
 
 ```
 
