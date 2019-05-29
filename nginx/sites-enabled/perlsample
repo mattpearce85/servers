@@ -1,7 +1,7 @@
 server {
         listen 80;
 
-        server_name perl.fancords.com;
+        server_name perl.fancords.com perl.localhost;
 
         root /var/www/html/perl/sample/;
         index index.html index.htm index.php index.pl index.cgi;

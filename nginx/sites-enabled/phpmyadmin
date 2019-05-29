@@ -1,7 +1,7 @@
 server {
         listen 80;
         
-        server_name pma.fancords.com;
+        server_name pma.fancords.com pma.localhost;
         
         location / {
                 proxy_set_header    Host $host;

@@ -1,7 +1,7 @@
 server {
     listen 80;
 
-    server_name llnl.fancords.com;
+    server_name llnl.fancords.com llnl.localhost;
 
     root /var/www/html/php7/llnl/;
     index index.php index.html index.htm default.html default.htm;

@@ -1,7 +1,7 @@
 server {
         listen 80;
 
-        server_name theia.fancords.com;
+        server_name theia.fancords.com theia.localhost;
 
         auth_basic "Authorization Required";
         auth_basic_user_file /etc/nginx/.htpasswd;

@@ -1,7 +1,7 @@
 server {
         listen 80 default_server;
 
-        server_name fancords.com www.fancords.com;
+        server_name fancords.com www.fancords.com fancords.localhost;
 
         root /var/www/html/php7/fancords.com/;
         index index.php index.html index.htm default.html default.htm;
