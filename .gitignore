@@ -1,5 +1,13 @@
 /.idea/
 
+/.cache/
+/.config/
+/.local/
+/.vagrant/
+/.bash_history
+/.viminfo
+/ubuntu-xenial-16.04-cloudimg-console.log
+
 /webroot/perl/*
 !/webroot/perl/sample/
 
